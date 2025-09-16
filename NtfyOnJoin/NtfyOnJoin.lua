@@ -7,6 +7,7 @@ ntfy_server = "https://ntfy.littlebitstudios.com" -- The public server is ntfy.s
 allow_studio = true -- set to false to produce no notification in Studio
 
 function topic_gen()
+	local topic
 	if game.CreatorType == Enum.CreatorType.Group then
 		topic = "roblox_feed_grp-" .. game.CreatorId
 	else
@@ -74,4 +75,5 @@ else
 	topicString = ntfy_topic
 end
 print("NtfyOnJoin loaded | Server: " .. ntfy_server .. " | Topic: " .. topicString)
+
 
