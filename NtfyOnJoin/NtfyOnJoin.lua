@@ -40,7 +40,7 @@ game.Players.PlayerAdded:Connect(function(player: Player)
 
 	-- Prepare data to send to ntfy
 	local data
-	if game:GetService("RunService"):IsStudio() then
+	if not game:GetService("RunService"):IsStudio() then
 		data = {
 			topic = ltopic,
 			title = "Player Joined Game",
@@ -67,7 +67,7 @@ game.Players.PlayerAdded:Connect(function(player: Player)
 	end
 end)
 
--- Determine topic string before printing
+-- Fix: Determine topic string before printing
 local topicString = ""
 if ntfy_topic == "auto" or ntfy_topic == "" then
 	topicString = topic_gen()
