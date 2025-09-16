@@ -3,7 +3,7 @@
 -- Before using, go to Game Settings -> Security in the Studio and enable "Allow HTTP Requests"
 
 ntfy_topic = "auto" -- Set to "auto" to automatically generate a topic, or set to a specific topic name
-ntfy_server = "https://ntfy.littlebitstudios.com" -- The public server is ntfy.sh, private servers must be accessible to the Internet
+ntfy_server = "https://ntfy.sh" -- The public server is ntfy.sh, private servers must be accessible to the Internet
 allow_studio = true -- set to false to produce no notification in Studio
 
 function topic_gen()
@@ -75,5 +75,6 @@ else
 	topicString = ntfy_topic
 end
 print("NtfyOnJoin loaded | Server: " .. ntfy_server .. " | Topic: " .. topicString)
+
 
 
