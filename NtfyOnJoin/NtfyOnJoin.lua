@@ -75,6 +75,3 @@ else
 	topicString = ntfy_topic
 end
 print("NtfyOnJoin loaded | Server: " .. ntfy_server .. " | Topic: " .. topicString)
-
-
-
