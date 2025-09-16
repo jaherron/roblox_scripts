@@ -67,7 +67,7 @@ game.Players.PlayerAdded:Connect(function(player: Player)
 	end
 end)
 
--- Fix: Determine topic string before printing
+-- Determine topic string before printing
 local topicString = ""
 if ntfy_topic == "auto" or ntfy_topic == "" then
 	topicString = topic_gen()
@@ -75,3 +75,4 @@ else
 	topicString = ntfy_topic
 end
 print("NtfyOnJoin loaded | Server: " .. ntfy_server .. " | Topic: " .. topicString)
+
